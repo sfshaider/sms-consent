@@ -2,12 +2,6 @@
 
 Professional business website for HSyed.dev software development services, designed to meet Twilio verification requirements for SMS compliance.
 
-## 🎯 Purpose
-
-This website was created to address Twilio verification requirements:
-- **Reason code 30473**: Invalid or Inaccessible Website URL
-- **Reason code 30506**: Opt-Ins Must Clearly Reflect the End Business
-
 ## 📁 Project Structure
 
 ```
