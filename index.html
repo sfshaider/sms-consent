@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMS Consent & Notifications</title>
+    <meta name="description" content="HSyed.dev - Professional Software Development and Digital Solutions">
+    <title>HSyed.dev - Software Development & Digital Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,293 +17,477 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
         }
 
         .container {
-            max-width: 600px;
+            max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
+            padding: 0 20px;
         }
 
-        .header {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
             text-align: center;
         }
 
-        .header h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
-        .header p {
-            font-size: 1.1em;
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
             opacity: 0.9;
         }
 
-        .content {
-            padding: 40px;
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            padding: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin-right: 1rem;
+            width: 30px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 1.5rem;
         }
 
-        label {
+        .form-group label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #555;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
         }
 
-        input[type="text"], input[type="email"], input[type="tel"] {
+        .form-group input,
+        .form-group textarea {
             width: 100%;
-            padding: 12px 15px;
+            padding: 10px;
             border: 2px solid #e1e5e9;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-
-        input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
-            outline: none;
-            border-color: #4facfe;
-        }
-
-        .consent-section {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
-            margin: 25px 0;
-            border-left: 4px solid #4facfe;
-        }
-
-        .consent-section h3 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-
-        .checkbox-wrapper {
-            display: flex;
-            align-items: flex-start;
-            margin: 20px 0;
-            cursor: pointer;
-        }
-
-        .checkbox-wrapper input[type="checkbox"] {
-            margin-right: 12px;
-            margin-top: 4px;
-            transform: scale(1.2);
-            cursor: pointer;
-        }
-
-        .checkbox-wrapper label {
-            margin-bottom: 0;
-            cursor: pointer;
-            font-weight: 500;
-        }
-
-        .terms-text {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 10px;
-            padding: 15px;
-            background: white;
             border-radius: 5px;
-            border: 1px solid #e1e5e9;
+            font-size: 1rem;
         }
 
-        .terms-text a {
-            color: #4facfe;
-            text-decoration: none;
-        }
-
-        .terms-text a:hover {
-            text-decoration: underline;
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
         }
 
         .submit-btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 15px 30px;
+            padding: 12px 30px;
             border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 1rem;
             width: 100%;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .submit-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .info-box {
-            background: #e8f4fd;
-            border: 1px solid #bee5eb;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .info-box h4 {
-            color: #0c5460;
-            margin-bottom: 10px;
-        }
-
-        .info-box ul {
-            margin-left: 20px;
-            color: #0c5460;
-        }
-
-        .footer {
-            background: #f8f9fa;
-            padding: 20px;
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
             text-align: center;
-            font-size: 0.9em;
-            color: #666;
+            padding: 2rem 0;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                margin: 10px;
-                border-radius: 10px;
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
             }
-            
-            .header, .content {
-                padding: 20px;
+
+            .hero h1 {
+                font-size: 2rem;
             }
-            
-            .header h1 {
-                font-size: 1.8em;
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>📱 SMS Notifications</h1>
-            <p>Stay updated with real-time slot availability alerts</p>
+    <header>
+        <nav class="container">
+            <div class="logo">HSyed.dev</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="sms-terms.html">SMS Terms</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Professional Software Development</h1>
+            <p>Custom digital solutions, automation tools, and innovative software development services</p>
+            <a href="#contact" class="cta-button">Get Started</a>
         </div>
+    </section>
 
-        <div class="content">
-            <form id="consentForm">
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required>
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code service-icon"></i>
+                    <h3>Custom Software Development</h3>
+                    <p>Tailored software solutions built with modern technologies to meet your specific business needs.</p>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt service-icon"></i>
+                    <h3>Mobile & Web Applications</h3>
+                    <p>Responsive web applications and mobile apps that provide seamless user experiences across all devices.</p>
                 </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+                <div class="service-card">
+                    <i class="fas fa-robot service-icon"></i>
+                    <h3>Automation Solutions</h3>
+                    <p>Streamline your processes with intelligent automation tools and monitoring systems.</p>
                 </div>
+                <div class="service-card">
+                    <i class="fas fa-cloud service-icon"></i>
+                    <h3>Cloud Integration</h3>
+                    <p>Scalable cloud solutions and API integrations to modernize your digital infrastructure.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h3>Analytics & Monitoring</h3>
+                    <p>Real-time monitoring systems and data analytics to optimize your business operations.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-comments service-icon"></i>
+                    <h3>SMS & Notification Services</h3>
+                    <p>Professional SMS marketing and notification systems with full compliance and opt-in management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="consent-section">
-                    <h3>🔔 SMS Notification Consent</h3>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About HSyed.dev</h2>
+                    <p>We are a professional software development company specializing in creating innovative digital solutions that drive business growth and efficiency.</p>
+                    <p>Our expertise spans across custom software development, automation tools, and notification systems, with a focus on delivering high-quality, scalable solutions.</p>
+                    <p>We pride ourselves on maintaining the highest standards of compliance, security, and customer service in all our projects.</p>
                     
-                    <div class="info-box">
-                        <h4>What you'll receive:</h4>
-                        <ul>
-                            <li>Real-time slot availability alerts</li>
-                            <li>Important system updates</li>
-                            <li>Service status notifications</li>
-                        </ul>
-                    </div>
-
-                    <div class="checkbox-wrapper">
-                        <input type="checkbox" id="sms-consent" name="sms_consent" required>
-                        <label for="sms-consent">
-                            <strong>Yes, I consent to receive SMS notifications from this service.</strong>
-                            I understand that I can opt out at any time by replying STOP.
-                        </label>
-                    </div>
-
-                    <div class="terms-text">
-                        <strong>SMS Terms & Conditions:</strong><br>
-                        By checking this box, you consent to receive text messages from our slot monitoring service at the number provided. 
-                        Message frequency may vary based on slot availability. Message and data rates may apply. 
-                        You can reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help at any time. 
-                        <a href="sms-terms.html">View full SMS terms</a> | 
-                        <a href="privacy.html">Privacy Policy</a>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div>Projects Completed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5+</div>
+                            <div>Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div>Client Satisfaction</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24/7</div>
+                            <div>Support Available</div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <button type="submit" class="submit-btn" id="submitBtn">
-                        ✅ Grant SMS Permission
-                    </button>
+                <div class="about-image">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 400px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
+    </section>
 
-        <div class="footer">
-            <p>Your privacy is important to us. We will never share your information with third parties.</p>
-            <p><strong>Need help?</strong> Reply HELP to any message or contact support.</p>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Ready to start your next project? Contact us today for a free consultation.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email:</strong><br>
+                            contact@hsyed.dev
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong>Website:</strong><br>
+                            www.hsyed.dev
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Business Hours:</strong><br>
+                            Monday - Friday: 9AM - 6PM EST
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Service Area:</strong><br>
+                            Global Remote Services
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="sms-terms.html">SMS Terms</a>
+            </div>
+            <p>&copy; 2024 HSyed.dev. All rights reserved. Professional Software Development Services.</p>
+        </div>
+    </footer>
 
     <script>
-        document.getElementById('consentForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                sms_consent: document.getElementById('sms-consent').checked,
-                timestamp: new Date().toISOString(),
-                ip_address: 'Browser_Request', // In real implementation, get from server
-                consent_text: 'User agreed to receive SMS notifications for slot availability alerts'
-            };
-
-            // Disable submit button
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Processing...';
-
-            // In a real implementation, send this data to your server
-            console.log('Consent Data:', formData);
-            
-            // Simulate API call
-            setTimeout(() => {
-                alert('✅ Thank you! SMS notifications have been enabled for slot monitoring.');
-                
-                // Redirect to thank you page (create this next)
-                window.location.href = 'thank-you.html';
-            }, 1000);
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
 
-        // Phone number formatting
-        document.getElementById('phone').addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length >= 10) {
-                value = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
-            }
-            e.target.value = value;
+        // Contact form handling
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
         });
     </script>
 </body>
-</html>
+</html> 
