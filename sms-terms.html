@@ -73,7 +73,7 @@
         }
 
         .nav-cta {
-            background: #000;
+            background: #2d5016;
             color: white !important;
             padding: 10px 20px;
             border-radius: 6px;
@@ -82,7 +82,7 @@
         }
 
         .nav-cta:hover {
-            background: #333;
+            background: #3e6b1a;
             transform: translateY(-1px);
         }
 
@@ -95,7 +95,7 @@
 
         /* Page Header */
         .page-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2d5016 0%, #3e6b1a 50%, #1a3d0a 100%);
             color: white;
             padding: 80px 40px;
             text-align: center;
@@ -161,7 +161,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2d5016 0%, #5a8a2a 100%);
             border-radius: 2px;
         }
 
@@ -197,14 +197,14 @@
             content: '•';
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: #2d5016;
             font-weight: bold;
             font-size: 18px;
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-            border: 1px solid rgba(102, 126, 234, 0.2);
+            background: linear-gradient(135deg, rgba(45, 80, 22, 0.05) 0%, rgba(90, 138, 42, 0.05) 100%);
+            border: 1px solid rgba(45, 80, 22, 0.2);
             border-radius: 12px;
             padding: 32px;
             margin: 32px 0;
@@ -218,19 +218,19 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2d5016 0%, #5a8a2a 100%);
             border-radius: 12px 12px 0 0;
         }
 
         .highlight-box h4 {
-            color: #667eea;
+            color: #2d5016;
             margin-bottom: 16px;
             font-size: 18px;
             font-weight: 700;
         }
 
         .business-info {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2d5016 0%, #5a8a2a 50%, #1a3d0a 100%);
             color: white;
             padding: 40px;
             border-radius: 12px;
@@ -267,7 +267,7 @@
             padding: 40px;
             border-radius: 12px;
             margin: 32px 0;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #2d5016;
         }
 
         .contact-info h3 {
@@ -280,7 +280,7 @@
         .back-link {
             display: inline-flex;
             align-items: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2d5016 0%, #5a8a2a 100%);
             color: white;
             padding: 16px 32px;
             border-radius: 8px;
@@ -289,17 +289,18 @@
             font-size: 16px;
             margin-top: 40px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 4px 12px rgba(45, 80, 22, 0.3);
         }
 
         .back-link:hover {
+            background: linear-gradient(135deg, #3e6b1a 0%, #6ba02e 100%);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 24px rgba(45, 80, 22, 0.4);
         }
 
         /* Footer */
         footer {
-            background: #000;
+            background: linear-gradient(135deg, #1a3d0a 0%, #0f2406 100%);
             color: white;
             padding: 60px 0 30px;
             margin-top: 80px;
@@ -431,8 +432,15 @@
     <div class="main-content">
         <div class="page-header">
             <div class="page-header-content fade-in-up">
-                <h1>📱 SMS Terms & Conditions</h1>
-                <p>hsyed.dev Professional Notification Services</p>
+                <h1 style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+                    <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; fill: currentColor;">
+                        <rect x="5" y="2" width="14" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M12 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 5h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    SMS Terms & Conditions
+                </h1>
+                <!-- <p>hsyed.dev Professional Notification Services</p> -->
             </div>
         </div>
 
