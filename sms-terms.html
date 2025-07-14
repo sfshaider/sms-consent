@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SMS Terms and Conditions for HSyed.dev notification services">
-    <title>SMS Terms & Conditions - HSyed.dev</title>
+    <meta name="description" content="SMS Terms and Conditions for hsyed.dev notification services">
+    <title>SMS Terms & Conditions - hsyed.dev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,171 +14,440 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
+            color: #1a1a1a;
+            background: #fafafa;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 24px;
         }
 
-        .header {
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #000;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        .nav-cta {
+            background: #000;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: #333;
+            transform: translateY(-1px);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 140px 24px 80px;
+        }
+
+        /* Page Header */
+        .page-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px 20px;
+            padding: 80px 40px;
             text-align: center;
-            border-radius: 10px;
-            margin-bottom: 30px;
+            border-radius: 16px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="36" cy="24" r="0.5"/></g></svg>') repeat;
         }
 
-        .header p {
-            font-size: 1.1rem;
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .page-header p {
+            font-size: 18px;
             opacity: 0.9;
+            font-weight: 400;
         }
 
+        /* Content Sections */
         .content {
             background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+            margin-bottom: 40px;
         }
 
         h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #000;
+            letter-spacing: -1px;
+            position: relative;
+            padding-bottom: 16px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
         }
 
         h3 {
-            color: #34495e;
-            margin: 25px 0 15px 0;
-            font-size: 1.3rem;
+            color: #333;
+            margin: 32px 0 16px 0;
+            font-size: 20px;
+            font-weight: 700;
         }
 
         p {
-            margin-bottom: 15px;
-            font-size: 1rem;
-            color: #555;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+            line-height: 1.7;
         }
 
         ul {
-            margin: 15px 0 15px 25px;
+            margin: 20px 0 20px 0;
+            padding-left: 0;
+            list-style: none;
         }
 
         li {
-            margin-bottom: 8px;
-            color: #555;
+            margin-bottom: 12px;
+            color: #666;
+            font-size: 15px;
+            position: relative;
+            padding-left: 24px;
+        }
+
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 18px;
         }
 
         .highlight-box {
-            background: #e8f4fd;
-            border: 1px solid #bee5eb;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 32px 0;
+            position: relative;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px 12px 0 0;
         }
 
         .highlight-box h4 {
-            color: #0c5460;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .contact-info {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #667eea;
-        }
-
-        .back-link {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: transform 0.3s;
-        }
-
-        .back-link:hover {
-            transform: translateY(-2px);
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #666;
-            font-size: 0.9rem;
+            color: #667eea;
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 700;
         }
 
         .business-info {
-            background: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 32px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-info::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
         }
 
         .business-info h3 {
             color: white;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: 700;
         }
 
         .business-info p {
             color: rgba(255,255,255,0.9);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
+        .contact-info {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 32px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .contact-info h3 {
+            color: #000;
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            margin-top: 40px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .footer-brand p {
+            color: #999;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .footer-links h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-links li {
+            padding-left: 0;
+        }
+
+        .footer-links li::before {
+            display: none;
+        }
+
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 2;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
+            .nav-links {
+                display: none;
             }
-            
+
+            .main-content {
+                padding: 120px 16px 60px;
+            }
+
+            .page-header {
+                padding: 60px 24px;
+                margin-bottom: 40px;
+            }
+
             .content {
-                padding: 20px;
+                padding: 40px 24px;
             }
-            
-            .header h1 {
-                font-size: 2rem;
+
+            .business-info,
+            .contact-info,
+            .highlight-box {
+                padding: 24px;
             }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>📱 SMS Terms & Conditions</h1>
-            <p>HSyed.dev Professional Notification Services</p>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">hsyed.dev</a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="sms-terms.html">SMS Terms</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="page-header">
+            <div class="page-header-content fade-in-up">
+                <h1>📱 SMS Terms & Conditions</h1>
+                <p>hsyed.dev Professional Notification Services</p>
+            </div>
         </div>
 
         <div class="content">
             <div class="business-info">
-                <h3>About HSyed.dev</h3>
-                <p><strong>Business Name:</strong> HSyed.dev - Professional Software Development</p>
-                <p><strong>Service Provider:</strong> HSyed.dev</p>
+                <h3>About hsyed.dev</h3>
+                <p><strong>Business Name:</strong> hsyed.dev - Professional Software Development</p>
+                <p><strong>Service Provider:</strong> hsyed.dev</p>
                 <p><strong>Website:</strong> www.hsyed.dev</p>
                 <p><strong>Email:</strong> contact@hsyed.dev</p>
                 <p><strong>Service Type:</strong> Professional software development, automation tools, and notification services</p>
             </div>
 
             <h2>1. SMS Program Description</h2>
-            <p>HSyed.dev operates SMS notification services to provide real-time alerts and updates related to our software development and automation services. By opting into our SMS program, you agree to receive text messages from HSyed.dev at the mobile number you provided.</p>
+            <p>hsyed.dev operates SMS notification services to provide real-time alerts and updates related to our software development and automation services. By opting into our SMS program, you agree to receive text messages from hsyed.dev at the mobile number you provided.</p>
 
             <div class="highlight-box">
                 <h4>What You'll Receive:</h4>
@@ -191,7 +461,7 @@
             </div>
 
             <h2>2. Consent and Opt-In Process</h2>
-            <p>By providing your mobile phone number and checking the SMS consent box on our website forms, you expressly consent to receive SMS messages from <strong>HSyed.dev</strong> for the purposes described above.</p>
+            <p>By providing your mobile phone number and checking the SMS consent box on our website forms, you expressly consent to receive SMS messages from <strong>hsyed.dev</strong> for the purposes described above.</p>
             
             <h3>Your Consent Includes:</h3>
             <ul>
@@ -212,7 +482,7 @@
 
             <div class="highlight-box">
                 <h4>Important:</h4>
-                <p>HSyed.dev will never send promotional or marketing SMS without explicit separate consent. Our SMS services are primarily for operational notifications related to our software development and monitoring services.</p>
+                <p>hsyed.dev will never send promotional or marketing SMS without explicit separate consent. Our SMS services are primarily for operational notifications related to our software development and monitoring services.</p>
             </div>
 
             <h2>4. How to Opt Out</h2>
@@ -231,7 +501,7 @@
                 <li>Contact us through our website: www.hsyed.dev</li>
             </ul>
 
-            <p>Once you opt out, you will receive a confirmation message and no further SMS messages from HSyed.dev unless you opt in again.</p>
+            <p>Once you opt out, you will receive a confirmation message and no further SMS messages from hsyed.dev unless you opt in again.</p>
 
             <h2>5. Help and Support</h2>
             <p>For assistance with our SMS services:</p>
@@ -242,7 +512,7 @@
             </ul>
 
             <h2>6. Message and Data Rates</h2>
-            <p>Standard message and data rates may apply for SMS messages sent to and from your mobile device. HSyed.dev does not charge for SMS notifications, but your mobile carrier may charge standard text messaging rates. Contact your mobile carrier for information about your text messaging plan.</p>
+            <p>Standard message and data rates may apply for SMS messages sent to and from your mobile device. hsyed.dev does not charge for SMS notifications, but your mobile carrier may charge standard text messaging rates. Contact your mobile carrier for information about your text messaging plan.</p>
 
             <h2>7. Supported Carriers</h2>
             <p>Our SMS services are compatible with major U.S. carriers including but not limited to:</p>
@@ -253,7 +523,7 @@
             </ul>
 
             <h2>8. Privacy and Data Protection</h2>
-            <p>HSyed.dev is committed to protecting your privacy:</p>
+            <p>hsyed.dev is committed to protecting your privacy:</p>
             <ul>
                 <li>We only use your phone number for agreed-upon SMS notifications</li>
                 <li>We do not sell, rent, or share your mobile number with third parties</li>
@@ -262,7 +532,7 @@
             </ul>
 
             <h2>9. Service Availability</h2>
-            <p>SMS delivery is subject to network availability and is provided on a "best effort" basis. HSyed.dev cannot guarantee delivery of all messages due to factors including but not limited to:</p>
+            <p>SMS delivery is subject to network availability and is provided on a "best effort" basis. hsyed.dev cannot guarantee delivery of all messages due to factors including but not limited to:</p>
             <ul>
                 <li>Mobile carrier technical issues</li>
                 <li>Network congestion</li>
@@ -271,7 +541,7 @@
             </ul>
 
             <h2>10. Compliance</h2>
-            <p>HSyed.dev SMS services comply with:</p>
+            <p>hsyed.dev SMS services comply with:</p>
             <ul>
                 <li>Telephone Consumer Protection Act (TCPA)</li>
                 <li>CAN-SPAM Act</li>
@@ -280,7 +550,7 @@
             </ul>
 
             <h2>11. Changes to Terms</h2>
-            <p>HSyed.dev reserves the right to modify these SMS terms at any time. Material changes will be communicated via:</p>
+            <p>hsyed.dev reserves the right to modify these SMS terms at any time. Material changes will be communicated via:</p>
             <ul>
                 <li>SMS notification to active subscribers</li>
                 <li>Update on our website at www.hsyed.dev</li>
@@ -289,7 +559,7 @@
 
             <div class="contact-info">
                 <h3>Contact Information</h3>
-                <p><strong>HSyed.dev</strong><br>
+                <p><strong>hsyed.dev</strong><br>
                 Professional Software Development Services<br>
                 Email: contact@hsyed.dev<br>
                 Website: www.hsyed.dev<br>
@@ -301,10 +571,65 @@
 
             <a href="index.html" class="back-link">← Back to Website</a>
         </div>
-
-        <div class="footer">
-            <p>&copy; 2024 HSyed.dev. All rights reserved. Professional Software Development Services.</p>
-        </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>hsyed.dev</h3>
+                    <p>Professional software development services specializing in custom solutions, automation tools, and compliant SMS notification systems.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Software Development</a></li>
+                        <li><a href="index.html#services">Mobile Applications</a></li>
+                        <li><a href="index.html#services">Automation Tools</a></li>
+                        <li><a href="index.html#services">SMS Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="sms-terms.html">SMS Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 hsyed.dev. All rights reserved. Professional Software Development Services.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
