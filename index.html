@@ -41,16 +41,35 @@
             top: 0;
             z-index: 1000;
             transition: all 0.3s ease;
+            height: 72px;
         }
 
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 16px 0;
+            height: 100%;
         }
 
+        .home-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #2d5016 0%, #5a8a2a 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
 
+        .home-icon:hover {
+            background: linear-gradient(135deg, #3e6b1a 0%, #6ba02e 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(45, 80, 22, 0.4);
+        }
 
         .nav-links {
             display: flex;
@@ -864,6 +883,11 @@
 <body>
     <header>
         <nav class="container">
+            <a href="#home" class="home-icon">
+                <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: currentColor;">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+            </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>

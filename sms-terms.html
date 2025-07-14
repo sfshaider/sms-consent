@@ -36,6 +36,7 @@
             top: 0;
             z-index: 1000;
             transition: all 0.3s ease;
+            height: 72px;
         }
 
         nav {
@@ -43,14 +44,26 @@
             justify-content: space-between;
             align-items: center;
             padding: 16px 0;
+            height: 100%;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: #000;
+        .home-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #2d5016 0%, #5a8a2a 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
             text-decoration: none;
-            letter-spacing: -0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .home-icon:hover {
+            background: linear-gradient(135deg, #3e6b1a 0%, #6ba02e 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(45, 80, 22, 0.4);
         }
 
         .nav-links {
@@ -90,7 +103,7 @@
         .main-content {
             max-width: 900px;
             margin: 0 auto;
-            padding: 140px 24px 80px;
+            padding: 150px 24px 80px;
         }
 
         /* Page Header */
@@ -105,15 +118,7 @@
             overflow: hidden;
         }
 
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="36" cy="24" r="0.5"/></g></svg>') repeat;
-        }
+
 
         .page-header-content {
             position: relative;
@@ -373,7 +378,7 @@
             }
 
             .main-content {
-                padding: 120px 16px 60px;
+                padding: 130px 16px 60px;
             }
 
             .page-header {
@@ -418,7 +423,11 @@
 <body>
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">hsyed.dev</a>
+            <a href="index.html" class="home-icon">
+                <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: currentColor;">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#about">About</a></li>
