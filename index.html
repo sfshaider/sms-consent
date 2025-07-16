@@ -899,14 +899,14 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="container">
+    <div class="container">
             <div class="hero-content fade-in-up">
                 <h1>Find Talent,<br>Build Solutions,<br>Ship with Confidence.</h1>
-                <p class="hero-subtitle">Professional software development services and SMS notification systems that scale with your business needs.</p>
+                <p class="hero-subtitle">Professional software development services that scale with your business needs. Optional SMS notification services available separately.</p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn-primary">Get Started</a>
                     <a href="#services" class="btn-secondary">View Services</a>
-                </div>
+        </div>
             </div>
         </div>
     </section>
@@ -1000,8 +1000,8 @@
                             <circle cx="15" cy="10" r="1" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3>SMS & Notification Services</h3>
-                    <p>Professional SMS marketing and notification systems with full TCPA compliance and comprehensive opt-in management.</p>
+                    <h3>SMS & Notification Services (Optional)</h3>
+                    <p>Optional SMS notification systems with full TCPA compliance. Completely separate from our core development services - requires independent consent.</p>
                 </div>
             </div>
         </div>
@@ -1103,21 +1103,21 @@
                 <div class="contact-form">
                     <h3>Send us a Message</h3>
                     <form id="contact-form">
-                        <div class="form-group">
+                <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="user_name" required>
-                        </div>
-                        
-                        <div class="form-group">
+                </div>
+
+                <div class="form-group">
                             <label for="email">Email Address</label>
                             <input type="email" id="email" name="user_email" required>
-                        </div>
-                        
-                        <div class="form-group">
+                </div>
+
+                <div class="form-group">
                             <label for="subject">Subject</label>
                             <input type="text" id="subject" name="subject" required>
-                        </div>
-                        
+                </div>
+
                         <div class="form-group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project..."></textarea>
@@ -1134,21 +1134,51 @@
 
                         <!-- Standalone SMS Consent Section -->
                         <div class="sms-consent-section" style="background: #f8f9fa; border: 2px solid #e9ecef; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                            <!-- Prominent Independence Notice -->
+                            <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 6px; padding: 15px; margin-bottom: 15px;">
+                                <p style="margin: 0; font-size: 14px; color: #856404; font-weight: 600; text-align: center;">
+                                    ⚠️ <strong>OPTIONAL SERVICE:</strong> SMS consent is completely separate from and NOT required for any other hsyed.dev services
+                                </p>
+                            </div>
+                            
                             <div style="display: flex; align-items: flex-start; gap: 12px;">
                                 <input type="checkbox" id="sms-consent" name="sms_consent" style="margin-top: 4px; transform: scale(1.2);">
                                 <div>
-                                    <label for="sms-consent" style="font-weight: 600; color: #333; cursor: pointer; font-size: 15px;">
-                                        🚨 SMS Consent (Optional & Independent)
+                                    <label for="sms-consent" style="font-weight: 600; color: #333; cursor: pointer; font-size: 16px;">
+                                        📱 SMS Text Message Consent (100% Optional)
                                     </label>
-                                    <p style="margin: 8px 0 0 0; font-size: 14px; color: #666; line-height: 1.5;">
-                                        <strong>I explicitly consent to receive SMS notifications from hsyed.dev at the phone number provided above.</strong> 
-                                        This consent is separate and independent from all other services. Message and data rates may apply. 
-                                        <strong>SMS consent is NOT required</strong> for any other services or to submit this form.
+                                    <p style="margin: 8px 0 0 0; font-size: 15px; color: #333; line-height: 1.5; font-weight: 600;">
+                                        <strong>I agree to receive text messages from hsyed.dev</strong> at the phone number provided above.
                                     </p>
-                                    <p style="margin: 8px 0 0 0; font-size: 13px; color: #666;">
-                                        <a href="sms-terms.html" target="_blank" style="color: #2d5016; text-decoration: underline;">
-                                            View SMS Terms & Conditions
-                                        </a> | Reply STOP to opt-out anytime
+                                    <p style="margin: 12px 0 0 0; font-size: 14px; color: #666; line-height: 1.5;">
+                                        <strong>Message Types You'll Receive:</strong><br>
+                                        • Project updates and status notifications<br>
+                                        • Service alerts and maintenance notices<br>
+                                        • Important account communications<br>
+                                        • Promotional offers and new service announcements
+                                    </p>
+                                    
+                                    <!-- Enhanced Independence Statement -->
+                                    <div style="background: #e8f5e8; border-left: 4px solid #2d5016; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                                        <p style="margin: 0; font-size: 14px; color: #2d5016; line-height: 1.5; font-weight: 600;">
+                                            <strong>🔒 IMPORTANT:</strong> This SMS consent is completely separate and independent from all other hsyed.dev services. 
+                                            You can use all our services without providing SMS consent. SMS is NOT a requirement for:
+                                        </p>
+                                        <ul style="margin: 8px 0 0 20px; font-size: 13px; color: #2d5016;">
+                                            <li>Submitting this contact form</li>
+                                            <li>Receiving our software development services</li>
+                                            <li>Any purchases or business agreements</li>
+                                            <li>Email communications or support</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <p style="margin: 12px 0 0 0; font-size: 14px; color: #666; line-height: 1.5;">
+                                        Message and data rates may apply. This is a standalone opt-in for text messages only.
+                                    </p>
+                                    <p style="margin: 12px 0 0 0; font-size: 13px; color: #666;">
+                                        <a href="sms-terms.html" target="_blank" style="color: #2d5016; text-decoration: underline; font-weight: 600;">
+                                            View Complete SMS Terms & Conditions
+                                        </a> | Reply STOP to opt-out anytime | Reply HELP for help
                                     </p>
                                 </div>
                             </div>
@@ -1166,7 +1196,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>hsyed.dev</h3>
-                    <p>Professional software development services specializing in custom solutions, automation tools, and compliant SMS notification systems.</p>
+                    <p>Professional software development services specializing in custom solutions and automation tools. SMS notification services available as optional add-on.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Services</h4>
@@ -1175,8 +1205,8 @@
                         <li><a href="#services">Mobile Applications</a></li>
                         <li><a href="#services">Automation Tools</a></li>
                         <li><a href="#services">SMS Services</a></li>
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
                 <div class="footer-links">
                     <h4>Legal</h4>
                     <ul>
@@ -1225,8 +1255,8 @@
                 <button class="modal-close-btn" onclick="closeSuccessModal()">Perfect, Thanks!</button>
                 <button class="modal-secondary-btn" onclick="window.location.href='#services'">View Services</button>
             </div>
-        </div>
-    </div>
+                    </div>
+                </div>
 
     <!-- Error Modal -->
     <div id="errorModal" class="modal">
@@ -1239,10 +1269,10 @@
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                             <path d="M11 7h2v6h-2zm0 8h2v2h-2z"/>
                         </svg>
-                    </div>
+                </div>
                     <h2 class="modal-title">Message Not Sent</h2>
                     <p class="modal-subtitle">There was an issue sending your message</p>
-                </div>
+        </div>
             </div>
             <div class="modal-body">
                 <p>We're sorry, but there was a technical issue sending your message. Please try again or contact us directly.</p>
@@ -1273,7 +1303,7 @@
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+            e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({
@@ -1429,4 +1459,4 @@
         });
     </script>
 </body>
-</html> 
+</html>
