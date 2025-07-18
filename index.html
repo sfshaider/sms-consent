@@ -1141,47 +1141,72 @@
                                 </p>
                             </div>
                             
-                            <div style="display: flex; align-items: flex-start; gap: 12px;">
-                                <input type="checkbox" id="sms-consent" name="sms_consent" style="margin-top: 4px; transform: scale(1.2);">
-                                <div>
-                                    <label for="sms-consent" style="font-weight: 600; color: #333; cursor: pointer; font-size: 16px;">
-                                        📱 SMS Text Message Consent (100% Optional)
-                                    </label>
-                                    <p style="margin: 8px 0 0 0; font-size: 15px; color: #333; line-height: 1.5; font-weight: 600;">
-                                        <strong>I agree to receive text messages from hsyed.dev</strong> at the phone number provided above.
-                                    </p>
-                                    <p style="margin: 12px 0 0 0; font-size: 14px; color: #666; line-height: 1.5;">
-                                        <strong>Message Types You'll Receive:</strong><br>
-                                        • Project updates and status notifications<br>
-                                        • Service alerts and maintenance notices<br>
-                                        • Important account communications<br>
-                                        • Promotional offers and new service announcements
-                                    </p>
-                                    
-                                    <!-- Enhanced Independence Statement -->
-                                    <div style="background: #e8f5e8; border-left: 4px solid #2d5016; padding: 12px; margin: 15px 0; border-radius: 4px;">
-                                        <p style="margin: 0; font-size: 14px; color: #2d5016; line-height: 1.5; font-weight: 600;">
-                                            <strong>🔒 IMPORTANT:</strong> This SMS consent is completely separate and independent from all other hsyed.dev services. 
-                                            You can use all our services without providing SMS consent. SMS is NOT a requirement for:
+                            <!-- Informational SMS Consent -->
+                            <div style="background: white; border: 1px solid #dee2e6; border-radius: 6px; padding: 15px; margin-bottom: 15px;">
+                                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                    <input type="checkbox" id="sms-informational" name="sms_informational" style="margin-top: 4px; transform: scale(1.2);">
+                                    <div>
+                                        <label for="sms-informational" style="font-weight: 600; color: #333; cursor: pointer; font-size: 15px;">
+                                            📋 Service & Project Notifications (Optional)
+                                        </label>
+                                        <p style="margin: 8px 0 0 0; font-size: 14px; color: #333; line-height: 1.5; font-weight: 600;">
+                                            <strong>I agree to receive informational text messages from hsyed.dev</strong> about my projects and services.
                                         </p>
-                                        <ul style="margin: 8px 0 0 20px; font-size: 13px; color: #2d5016;">
-                                            <li>Submitting this contact form</li>
-                                            <li>Receiving our software development services</li>
-                                            <li>Any purchases or business agreements</li>
-                                            <li>Email communications or support</li>
-                                        </ul>
+                                        <p style="margin: 8px 0 0 0; font-size: 13px; color: #666; line-height: 1.5;">
+                                            <strong>Informational Message Types:</strong><br>
+                                            • Project updates and status notifications<br>
+                                            • Service alerts and maintenance notices<br>
+                                            • Important account communications<br>
+                                            • Technical support notifications
+                                        </p>
                                     </div>
-                                    
-                                    <p style="margin: 12px 0 0 0; font-size: 14px; color: #666; line-height: 1.5;">
-                                        Message and data rates may apply. This is a standalone opt-in for text messages only.
-                                    </p>
-                                    <p style="margin: 12px 0 0 0; font-size: 13px; color: #666;">
-                                        <a href="sms-terms.html" target="_blank" style="color: #2d5016; text-decoration: underline; font-weight: 600;">
-                                            View Complete SMS Terms & Conditions
-                                        </a> | Reply STOP to opt-out anytime | Reply HELP for help
-                                    </p>
                                 </div>
                             </div>
+                            
+                            <!-- Promotional SMS Consent -->
+                            <div style="background: white; border: 1px solid #dee2e6; border-radius: 6px; padding: 15px; margin-bottom: 15px;">
+                                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                                    <input type="checkbox" id="sms-promotional" name="sms_promotional" style="margin-top: 4px; transform: scale(1.2);">
+                                    <div>
+                                        <label for="sms-promotional" style="font-weight: 600; color: #333; cursor: pointer; font-size: 15px;">
+                                            🎯 Marketing & Promotional Messages (Optional)
+                                        </label>
+                                        <p style="margin: 8px 0 0 0; font-size: 14px; color: #333; line-height: 1.5; font-weight: 600;">
+                                            <strong>I agree to receive promotional text messages from hsyed.dev</strong> about offers and announcements.
+                                        </p>
+                                        <p style="margin: 8px 0 0 0; font-size: 13px; color: #666; line-height: 1.5;">
+                                            <strong>Promotional Message Types:</strong><br>
+                                            • Special offers and discounts<br>
+                                            • New service announcements<br>
+                                            • Marketing communications<br>
+                                            • Company news and updates
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Enhanced Independence Statement -->
+                            <div style="background: #e8f5e8; border-left: 4px solid #2d5016; padding: 12px; margin: 15px 0; border-radius: 4px;">
+                                <p style="margin: 0; font-size: 14px; color: #2d5016; line-height: 1.5; font-weight: 600;">
+                                    <strong>🔒 IMPORTANT:</strong> Both SMS consents are completely separate and independent from all other hsyed.dev services. 
+                                    You can use all our services without providing any SMS consent. SMS is NOT a requirement for:
+                                </p>
+                                <ul style="margin: 8px 0 0 20px; font-size: 13px; color: #2d5016;">
+                                    <li>Submitting this contact form</li>
+                                    <li>Receiving our software development services</li>
+                                    <li>Any purchases or business agreements</li>
+                                    <li>Email communications or support</li>
+                                </ul>
+                            </div>
+                            
+                            <p style="margin: 12px 0 0 0; font-size: 14px; color: #666; line-height: 1.5;">
+                                Message and data rates may apply. Each consent is independent - you can choose one, both, or neither.
+                            </p>
+                            <p style="margin: 12px 0 0 0; font-size: 13px; color: #666;">
+                                <a href="sms-terms.html" target="_blank" style="color: #2d5016; text-decoration: underline; font-weight: 600;">
+                                    View Complete SMS Terms & Conditions
+                                </a> | Reply STOP to opt-out anytime | Reply HELP for help
+                            </p>
                         </div>
                         
                         <button type="submit" class="submit-btn">Send Message</button>
@@ -1323,21 +1348,33 @@
             
             // Get form data
             const phoneNumber = document.getElementById('phone').value;
-            const smsConsent = document.getElementById('sms-consent').checked;
+            const smsInformational = document.getElementById('sms-informational').checked;
+            const smsPromotional = document.getElementById('sms-promotional').checked;
             
             // Validate SMS consent logic
-            if (smsConsent && !phoneNumber.trim()) {
-                alert('Please provide a phone number to receive SMS notifications, or uncheck the SMS consent option.');
+            if ((smsInformational || smsPromotional) && !phoneNumber.trim()) {
+                alert('Please provide a phone number to receive SMS notifications, or uncheck the SMS consent options.');
                 return;
             }
             
             // Log SMS consent status (for compliance tracking)
-            if (smsConsent && phoneNumber.trim()) {
-                console.log('SMS Consent: GRANTED for phone:', phoneNumber);
-                console.log('SMS Consent Timestamp:', new Date().toISOString());
-                console.log('SMS Consent Method: Website contact form with explicit checkbox');
+            const timestamp = new Date().toISOString();
+            if (phoneNumber.trim()) {
+                if (smsInformational) {
+                    console.log('INFORMATIONAL SMS Consent: GRANTED for phone:', phoneNumber);
+                    console.log('Informational SMS Consent Timestamp:', timestamp);
+                    console.log('Informational SMS Consent Method: Website contact form - separate checkbox');
+                }
+                if (smsPromotional) {
+                    console.log('PROMOTIONAL SMS Consent: GRANTED for phone:', phoneNumber);
+                    console.log('Promotional SMS Consent Timestamp:', timestamp);
+                    console.log('Promotional SMS Consent Method: Website contact form - separate checkbox');
+                }
+                if (!smsInformational && !smsPromotional) {
+                    console.log('SMS Consent: NOT GRANTED - Form submitted without any SMS opt-in');
+                }
             } else {
-                console.log('SMS Consent: NOT GRANTED - Form submitted without SMS opt-in');
+                console.log('SMS Consent: NOT GRANTED - No phone number provided');
             }
             
             // Update button state
